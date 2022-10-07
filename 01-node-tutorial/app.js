@@ -3,7 +3,6 @@ const sayMyName = (name) => {
 };
 
 sayMyName("marco");
-const lusho = "lusho";
-const arturito = "arturito";
+const { lusho, arturito } = require("./02-names");
 sayMyName(lusho);
 sayMyName(arturito);
