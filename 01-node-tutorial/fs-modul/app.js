@@ -3,4 +3,12 @@ const { readFileSync, writeFileSync } = require("fs");
 const first = readFileSync("./content/first.txt", "utf-8");
 const second = readFileSync("./content/second.txt", "utf-8");
 
-console.log(second);
+console.log(first, second);
+
+writeFileSync(
+  "./content/subfolder/example.txt",
+  `este archivo es de prueba :
+
+${first} and
+${second}`
+);
