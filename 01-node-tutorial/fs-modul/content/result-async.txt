@@ -1,0 +1,2 @@
+este es el resultado : hola this is first text file,
+    wena this is the second file
