@@ -1,0 +1,5 @@
+sudo npm intall -g nodemon
+para instalarlo de manera global, para eso nos movemos al terminal y aplicamos este comando
+
+npm intall nodemon
+para instalar de manera local, solo en esta app
