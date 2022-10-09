@@ -1,0 +1,25 @@
+{
+  "name": "node-tutorial",
+  "version": "1.0.0",
+  "description": "node and express tutorial from codding adict by jhon smilga",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoRosselDev/node-and-express-course.git"
+  },
+  "keywords": [
+    "node-and-express"
+  ],
+  "author": "admin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcoRosselDev/node-and-express-course/issues"
+  },
+  "homepage": "https://github.com/MarcoRosselDev/node-and-express-course#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
