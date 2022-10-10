@@ -12,6 +12,6 @@ const getText = (path) => {
   });
 };
 
-getText("./01-node-tutorial/fs-modul/content/first.txt").then((result) =>
-  console.log(result).catch((err) => console.log(err))
-);
+getText("./01-node-tutorial/fs-modul/content/first.txt")
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
