@@ -1,20 +1,9 @@
-const sayMyName = (name) => {
-  console.log(`hola ${name}`);
-};
+const { readFile } = require("fs");
 
-sayMyName("marco");
-// 1 metod
-const { lusho, arturito } = require("./02-names");
-sayMyName(lusho);
-sayMyName(arturito);
-// 2 metod
-const names = require("./02-names");
-
-sayMyName(names.eva);
-sayMyName(names.eduardo);
-
-// 3 metod
-
-const randomName = require("./03-alternative-flavor");
-
-console.log(randomName);
+readFile("./fs-async/content/first.txt", "utf8", (err, data) => {
+  if (err) {
+    return;
+  } else {
+    console.log(data);
+  }
+});
