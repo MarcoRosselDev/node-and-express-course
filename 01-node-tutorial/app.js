@@ -12,6 +12,19 @@ const getText = (path) => {
   });
 };
 
-getText("./01-node-tutorial/fs-modul/content/first.txt")
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err));
+const start = async () => {
+  try {
+    const first = await getText(
+      "./01-node-tutorial/fs-modul/content/first.txt"
+    );
+    console.log(first);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
+
+// getText("./01-node-tutorial/fs-modul/content/first.txt")
+//   .then((result) => console.log(result))
+//   .catch((err) => console.log(err));
