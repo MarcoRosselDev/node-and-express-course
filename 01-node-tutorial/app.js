@@ -17,7 +17,10 @@ const start = async () => {
     const first = await getText(
       "./01-node-tutorial/fs-modul/content/first.txt"
     );
-    console.log(first);
+    const second = await getText(
+      "./01-node-tutorial/fs-modul/content/second.txt"
+    );
+    console.log(first, second);
   } catch (error) {
     console.log(error);
   }
