@@ -1,7 +1,17 @@
 const express = require("express");
 const app = express();
 
-app.listen(4999, () => {
+app.get("/", (req, res) => {
+  console.log("user hit the resource");
+  res.send("home page");
+});
+
+app.get("/about", (req, res) => {
+  console.log("user response on about");
+  res.send("about page");
+});
+
+app.listen(5000, () => {
   console.log("lisining");
 });
 
