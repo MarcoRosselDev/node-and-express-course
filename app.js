@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+app.use(express.static("./02-express-tutorial/public"));
+
 app.get("/", (req, res) => {
   res.sendFile(
     path.resolve(__dirname, "./02-express-tutorial/navbar-app/index.html")
