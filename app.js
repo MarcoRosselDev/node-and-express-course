@@ -1,18 +1,13 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 
 app.get("/", (req, res) => {
-  console.log("user hit the resource");
-  res.status(200).send("home page");
+  res.sendFile(
+    path.resolve(__dirname, "./02-express-tutorial/navbar-app/index.html")
+  );
 });
-
-app.get("/about", (req, res) => {
-  console.log("user response on about");
-  res.status(200).send("about page");
-});
-
 app.all("*", (req, res) => {
-  console.log("missed page");
   res.status(404).send("<h1>resource not found</h1>");
 });
 
