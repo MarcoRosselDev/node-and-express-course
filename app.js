@@ -3,7 +3,7 @@ const app = express();
 const { products, people } = require("./data");
 
 app.get("/", (req, res) => {
-  res.json(products);
+  res.send('<h1>home page</h1><a href="/api/products">products</a>');
 });
 
 app.listen(5000, () => {
