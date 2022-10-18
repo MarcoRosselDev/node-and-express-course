@@ -55,7 +55,7 @@ app.put("/api/people/:id", (req, res) => {
   }
   const newPeople = people.map((person) => {
     if (person.id === Number(id)) {
-      person.name === name;
+      person.name = name;
     }
     return person;
   });
