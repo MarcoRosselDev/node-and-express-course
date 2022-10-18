@@ -6,12 +6,21 @@ let { people } = require("./data");
 app.use(express.static("./02-express-tutorial/methods-public"));
 // parse form data
 app.use(express.urlencoded({ extended: false }));
+// parse json
+app.use(express.json());
+
 app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
 
 app.post("/api/people", (req, res) => {
-  res.status(201).send("success");
+  const { name } = req.body;
+  if (!name) {
+    return res
+      .status(400)
+      .json({ succes: false, msg: "please provide name value" });
+  }
+  res.status(201).send({ success: true, person: name });
 });
 
 app.post("/login", (req, res) => {
