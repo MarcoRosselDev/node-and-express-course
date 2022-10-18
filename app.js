@@ -28,8 +28,9 @@ app.post("/api/people/postman", (req, res) => {
   if (!name) {
     return res
       .status(400)
-      .json({ success: false, msg: "pelase provide name value" });
+      .json({ success: false, msg: "pelase provide name value <3" });
   }
+  res.status(201).send({ succes: true, data: [...people, name] });
 });
 
 app.post("/login", (req, res) => {
@@ -39,6 +40,19 @@ app.post("/login", (req, res) => {
   }
 
   res.status(401).send("Please Provide Credentials");
+});
+
+app.put("/api/people/:id", (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+
+  const person = people.find((person) => person.id === Number(id));
+
+  if (!person) {
+    return res
+      .status(404)
+      .json({ success: false, msg: `no person with id ${id}` });
+  }
 });
 
 app.listen(5000, () => {
