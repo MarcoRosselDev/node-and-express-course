@@ -23,6 +23,15 @@ app.post("/api/people", (req, res) => {
   res.status(201).send({ success: true, person: name });
 });
 
+app.post("/api/people/postman", (req, res) => {
+  const { name } = req.body;
+  if (!name) {
+    return res
+      .status(400)
+      .json({ success: false, msg: "pelase provide name value" });
+  }
+});
+
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
