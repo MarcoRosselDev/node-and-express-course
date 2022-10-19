@@ -10,12 +10,12 @@ const {
 
 router.get("/", getPeople);
 
-router.post("/");
+router.post("/", createPerson);
 
-router.post("/postman");
+router.post("/postman", createPersonPostman);
 
-router.put("/:id");
+router.put("/:id", updatePerson);
 
-router.delete("/:id");
+router.delete("/:id", deletePerson);
 
 module.exports = router;
